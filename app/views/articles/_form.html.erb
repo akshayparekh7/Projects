@@ -7,13 +7,14 @@
   </ul>
 <% end %>
 
-<%= form_tag(:controller => "articles", :action => "create") do |f| %>
-  <label>Title:</label>
-  <%= text_field :article, :title %></br>
-  </br>
-  <label>Description:</label>
-  <%= text_area :article, :description %></br>
-  </br>
-  <%= submit_tag("Create", :style => "width:100px; background:#b2ebf2; ") %>
-  </br>
+<%= form_for @article do |f| %>
+  <%= f.label 'Article Title' %><br>
+  <%= f.text_field :title %><br>
+  <br>
+  <%= f.label 'Article Description' %><br>
+  <%= f.text_area :description %><br>
+  <br>
+
+  <%= f.submit "Submit Article" %>
+  <br>
 <% end %>
