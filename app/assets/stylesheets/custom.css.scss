@@ -1,10 +1,14 @@
 @import "bootstrap";
 .navbar {
-    background-color: #a2deec !important;
+    // background-color: #a2deec !important;
+    height: 45px;
   }  
+table, th, td {
+  border: 0.5px solid rgb(100, 97, 97);
+}
     
 .navbar-brand {  
-    font-size: 3rem;
+    font-size: 2rem;
   }
     
 h1 {  
