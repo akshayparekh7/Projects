@@ -30,7 +30,5 @@
 <br>
 <br>
 <center>
-  <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" style= "color: white;">
-    <%= link_to 'Create new article', new_article_path ,  style: 'color:white;', class: 'css_class' %>
-  </button>
+    <%= button_to 'Create new article', new_article_path, :method => :get, class: ' btn btn-primary' %>
 </center>

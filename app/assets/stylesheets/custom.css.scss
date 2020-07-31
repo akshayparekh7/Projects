@@ -27,3 +27,12 @@ h1 {
   float: none; /* Added */
   margin-bottom: 10px; /* Added */
 }
+
+.jumbotron {
+  background-image: asset-url('jumbotron.jpg');
+  height: 35rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
