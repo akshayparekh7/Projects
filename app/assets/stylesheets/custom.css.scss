@@ -34,5 +34,6 @@ h1 {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto 100%;
-  background-attachment: fixed;
+  // background-attachment: fixed;
+  object-fit: contain;
 }
