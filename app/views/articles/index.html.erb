@@ -1,3 +1,4 @@
+<%= render 'welcome/navigation'%>
 <br>
 <h1><strong><u>Articles Listing Page</u> </h1></strong>
 <br>
@@ -25,10 +26,12 @@
       <% end %>
     </tbody>
   </table>
+<br>
+<br>
 </div>
 
-<br>
-<br>
-<center>
-    <%= button_to 'Create new article', new_article_path, :method => :get, class: ' btn btn-primary' %>
-</center>
+<div class="text-center">
+  <%= button_to 'Create new article', new_article_path, :method => :get, class: ' btn btn-primary' %>
+</div>
+
+

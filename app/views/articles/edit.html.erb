@@ -1,11 +1,10 @@
+<%= render 'welcome/navigation'%>
 <br>
 <h1><strong><u>Edit article<strong></u></h1>
 
 <%= render 'form'%>
 <br>
-<p style= "font-size: 20px; text-align: center;">
-  <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" style= "color: white;">
-    <%= link_to 'Cancel and return to articles listing', articles_path, style: 'color:white;', class: 'css_class' %>
-  </button> 
+<div class="text-center">
+  <%= link_to 'Cancel and return to articles listing', articles_path, style: 'color:white;', class: ' btn btn-primary' %>
 </p>
 

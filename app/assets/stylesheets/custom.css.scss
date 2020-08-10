@@ -1,8 +1,10 @@
 @import "bootstrap";
-.navbar {
-    // background-color: #a2deec !important;
-    height: 45px;
-  }  
+// .navbar {
+//     // background-color: #a2deec !important;
+//     // height: 45px;
+//     margin-bottom: 60px;
+//   }  
+
 table, th, td {
   border: 0.5px solid rgb(100, 97, 97);
 }
@@ -30,10 +32,11 @@ h1 {
 
 .jumbotron {
   background-image: asset-url('jumbotron.jpg');
-  height: 35rem;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  // background-attachment: fixed;
-  object-fit: contain;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  padding-top: 20px;
+  padding-bottom: 20pxs;
 }
