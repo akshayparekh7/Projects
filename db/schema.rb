@@ -11,11 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200728105059) do
+ActiveRecord::Schema.define(version: 20200812151102) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text   "description"
+  end
+
+  create_table "specifications", force: :cascade do |t|
+    t.string   "phone_name"
+    t.text     "variants"
+    t.text     "launch_date"
+    t.string   "price"
+    t.text     "network"
+    t.text     "body"
+    t.text     "display"
+    t.string   "os"
+    t.text     "processor"
+    t.text     "memory"
+    t.text     "camera"
+    t.text     "sound"
+    t.text     "security"
+    t.text     "battery"
+    t.text     "connection"
+    t.integer  "rating"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

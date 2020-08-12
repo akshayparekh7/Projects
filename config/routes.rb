@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :one_plus
   resources :apple
   resources :samsung
+  resources :specifications
 end
