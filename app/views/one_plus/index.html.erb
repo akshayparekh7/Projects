@@ -1,16 +1,24 @@
 <br>
+<div class=" container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><%= link_to 'Home', root_path%></li>
+      <li class="breadcrumb-item active"><%= link_to 'One Plus'%></li>
+    </ol>
+  </nav>
+</div>
+
 <div class= "container">
   <% @one_plus_specifications.each do |specification| %> 
-      <div class="card mb-3 shadow p-3 rounded" style="max-width: 80%;">
+      <div class="card mb-3 shadow p-3 rounded" style="max-width: 90%;">
           <div class="row no-gutters">
-            <div class="col-md-4">
-              <%= image_tag "one-plus-logo.png", class: "card-img-top" %>
-            </div>
             <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title"><%= specification.phone_name%></h5>
-              <p class="card-text"><%= specification.launch_date %></p>
-              <p class="card-text"><small class="text-muted"><%= time_ago_in_words specification.created_at %> ago</small></p>
+              <h5 class="card-title"><span class="badge badge-light">Model Name:</span><%= specification.phone_name%></h5>
+              <h5 class="card-text"><span class="badge badge-light">Launch Date:</span> <%= specification.launch_date %></h6>
+              <h5 class="card-text"><span class="badge badge-light">Price:</span> <%= specification.price %></h6>
+              <h5 class="card-text"><span class="badge badge-light">Variants:</span> <%= specification.variants %></h6>
+              <h5 class="card-text"><small class="text-muted"><%= time_ago_in_words specification.created_at %> ago</small></p>
               <%= link_to '', one_plu_path(specification), class: "stretched-link"%>
             </div>
             </div>

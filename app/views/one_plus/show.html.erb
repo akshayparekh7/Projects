@@ -1,1 +1,109 @@
-<h1> This will show the complete review of selected Post </h1>
+<div class=" container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><%= link_to 'Home', root_path%></li>
+      <li class="breadcrumb-item"><%= link_to 'One Plus', one_plus_path%></li>
+      <li class="breadcrumb-item active"><%= link_to "#{@specification.phone_name}"%></li>
+    </ol>
+  </nav>
+</div>
+
+<div class= "container">
+    <div class="card">
+    <div class="card-header text-white bg-dark">
+        <h5>Review</h5>
+    </div>
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+        <p><%= @specification.description%></p>
+        <footer class="blockquote-footer">Rating:  
+            <% @specification.rating.times do  %>
+              <span class="glyphicon glyphicon-star"></span>
+            <% end %>
+        </footer>
+        </blockquote>
+    </div>
+    </div>
+
+    <table class="table">
+    <thead class="thead-dark">
+      <tr style= "text-align: center;">
+        <th scope="col", width= "30%">Features</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tbody>
+        <tr style= "font-size: 20px; text-align: center;">
+          <td><strong>Model Name</strong></td>
+          <td><%= @specification.phone_name %></td>
+        </tr>
+
+        <tr style= "font-size: 20px; text-align: center;">
+          <td><strong>Price</strong></td>
+          <td><%= @specification.price %></td>
+        </tr>
+
+        <tr style= "font-size: 20px; text-align: center;">
+          <td><strong>Variants</strong></td>
+          <td><%= @specification.variants %></td>
+        </tr>
+
+       <tr style= "font-size: 20px; text-align: center;">
+          <td><strong>Launch Date</strong></td>
+          <td><%= @specification.launch_date %></td>
+        </tr>
+
+        <tr style= "font-size: 20px; text-align: center;">
+          <td><strong>Processor</strong></td>
+          <td><%= @specification.processor %></td>
+        </tr>
+
+        <tr style= "font-size: 20px; text-align: center;">
+          <td><strong>Memory Variants</strong></td>
+          <td><%= @specification.memory %></td>
+        </tr>
+
+        <tr style= "font-size: 20px; text-align: center;">
+          <td><strong>Camera</strong></td>
+          <td><%= @specification.camera %></td>
+        </tr>
+
+        <tr style= "font-size: 20px; text-align: center;">
+          <td><strong>Battery</strong></td>
+          <td><%= @specification.battery %></td>
+        </tr>
+
+        <tr style= "font-size: 20px; text-align: center;">
+          <td><strong>Body</strong></td>
+          <td><%= @specification.body %></td>
+        </tr>
+
+        <tr style= "font-size: 20px; text-align: center;">
+          <td><strong>Display</strong></td>
+          <td><%= @specification.display %></td>
+        </tr>
+
+        <tr style= "font-size: 20px; text-align: center;">
+          <td><strong>OS</strong></td>
+          <td><%= @specification.os %></td>
+        </tr>
+
+        <tr style= "font-size: 20px; text-align: center;">
+          <td><strong>Sound</strong></td>
+          <td><%= @specification.sound %></td>
+        </tr>
+
+        <tr style= "font-size: 20px; text-align: center;">
+          <td><strong>Security</strong></td>
+          <td><%= @specification.security %></td>
+        </tr>
+
+        <tr style= "font-size: 20px; text-align: center;">
+          <td><strong>Connection</strong></td>
+          <td><%= @specification.connection %></td>
+        </tr>
+
+    </tbody>    
+   </table>
+</div>

@@ -28,16 +28,14 @@ h1 {
 .card {
   margin: 0 auto; /* Added */
   float: none; /* Added */
-  margin-bottom: 10px; /* Added */
-}
-
-.jumbotron {
-  background-image: asset-url('jumbotron.jpg');
-  background-size: cover;
-  background-position: center;
+  margin-bottom: 20px; /* Added */
 }
 
 .container {
   padding-top: 20px;
   padding-bottom: 20pxs;
+}
+
+.title_logo {
+  border-radius: 5px;
 }
