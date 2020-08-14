@@ -1,10 +1,10 @@
 class OnePlusController < ApplicationController
 
-  # def index
-  #   @specifications = Specification.all
-  # end
-
   def index
-    @specification = Specification.find_by phone_name: "One plus"
+    @one_plus_specifications = Specification.where(phone_name: "One plus")
+  end  
+
+  def show
+
   end  
 end

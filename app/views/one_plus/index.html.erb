@@ -1,27 +1,22 @@
 <br>
-<h1><strong><u>This Page will show all Reviews related to One Plus</u></strong></h1>
-<br>
 <div class= "container">
-    <div class="card bg-light mb-3" style="max-width: 20rem;" >
-        <div class="card-header text-white bg-dark mb-3">Title: <%= @specification.phone_name %></div>
-        <div class="card-body">
-            <p class="card-text">Variants: <%= @specification.variants%></p>
-            <p class="card-text">Launch Date: <%= @specification.launch_date%></p>
-            <p class="card-text">Price: <%= @specification.price%></p>
-            <p class="card-text">Network: <%= @specification.network%></p>
-            <p class="card-text">Body: <%= @specification.body%></p>
-            <p class="card-text">Display: <%= @specification.display%></p>
-            <p class="card-text">OS: <%= @specification.os%></p>
-            <p class="card-text">Processor: <%= @specification.processor%></p>
-            <p class="card-text">Memory: <%= @specification.memory%></p>
-            <p class="card-text">Camera: <%= @specification.camera%></p>
-            <p class="card-text">Sound: <%= @specification.sound%></p>
-            <p class="card-text">Security: <%= @specification.security%></p>
-            <p class="card-text">Connection: <%= @specification.connection%></p>
-            <p class="card-text">Rating: <%= @specification.rating%></p>
-            <p class="card-text">Battery: <%= @specification.battery%></p>
-        </div>
-    </div>
+  <% @one_plus_specifications.each do |specification| %> 
+      <div class="card mb-3 shadow p-3 rounded" style="max-width: 80%;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <%= image_tag "one-plus-logo.png", class: "card-img-top" %>
+            </div>
+            <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><%= specification.phone_name%></h5>
+              <p class="card-text"><%= specification.launch_date %></p>
+              <p class="card-text"><small class="text-muted"><%= time_ago_in_words specification.created_at %> ago</small></p>
+              <%= link_to '', one_plu_path(specification), class: "stretched-link"%>
+            </div>
+            </div>
+          </div>
+      </div>
+  <% end %>
 </div>
 
 
