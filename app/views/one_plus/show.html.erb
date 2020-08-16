@@ -1,3 +1,4 @@
+<%# breadcrumb %>
 <div class=" container">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -7,7 +8,43 @@
     </ol>
   </nav>
 </div>
-
+<%# carousel %>
+<div class= "container"> 
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      
+      <% @images.each_with_index do |a,i|%>
+        <%if i == 0 %>
+          <li data-target="#carouselExampleIndicators" data-slide-to="<% puts "#{i}" %>" class="active"></li>
+        <% else %>
+          <li data-target="#carouselExampleIndicators" data-slide-to= "<% puts "#{i}" %>"></li>
+        <%end%>
+      <% end %>
+    </ol>
+    <div class="carousel-inner">
+        <% @images.each_with_index do |image, index|%>
+        <% if index == 0 %>
+          <div class="carousel-item active">
+            <%= image_tag "#{File.basename(image)}", class:"d-block w-100", alt:"..."%>
+          </div>
+        <% else %>
+          <div class="carousel-item">
+            <%= image_tag "#{File.basename(image)}", class:"d-block w-100", alt:"..."%>
+          </div>
+        <% end %>
+      <%end%>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<%# main review %>
 <div class= "container">
     <div class="card">
     <div class="card-header text-white bg-dark">
@@ -24,7 +61,7 @@
         </blockquote>
     </div>
     </div>
-
+<%# table for specification %>
     <table class="table">
     <thead class="thead-dark">
       <tr style= "text-align: center;">
@@ -107,3 +144,5 @@
     </tbody>    
    </table>
 </div>
+
+

@@ -33,9 +33,28 @@ h1 {
 
 .container {
   padding-top: 20px;
-  padding-bottom: 20pxs;
+  padding-bottom: 20px;
 }
 
 .title_logo {
   border-radius: 5px;
+}
+
+.carousel {
+  background: none repeat scroll 0 0 rgb(216, 216, 216);
+  padding: 0.5%;
+  width: 90%;
+  height: 500px;
+  border-style: solid;
+  align-items: center;
+}
+
+.carousel_inner {
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
 }

@@ -7,5 +7,6 @@ class OnePlusController < ApplicationController
 
   def show
     @specification = Specification.find(params[:id])
+    @images = Dir.glob('app/assets/images/*')
   end 
 end
