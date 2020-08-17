@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-header text-white bg-dark">
+    <h5>Review</h5>
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+    <p><%= @specification.description%></p>
+    <footer class="blockquote-footer">Rating:  
+      <% @specification.rating.times do  %>
+        <span class="glyphicon glyphicon-star"></span>
+      <% end %>
+    </footer>
+    </blockquote>
+  </div>
+</div>
