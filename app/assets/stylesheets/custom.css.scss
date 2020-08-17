@@ -41,18 +41,20 @@ h1 {
 }
 
 .carousel {
-  background: none repeat scroll 0 0 rgb(216, 216, 216);
+  // background: none repeat scroll 0 0 rgb(216, 216, 216);
   padding: 0.5%;
-  width: 90%;
-  height: 500px;
-  border-style: solid;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+  // border-style: solid;
+  // align-items: center;
   margin: 0 auto;
 }
 
 .carousel_inner {
   background-size: cover;
-  background-position: center center;
+  background-position: 50% 50%;
+  width: fit-content;
+  height: fit-content;
 }
 
 .carousel-control-next,
@@ -63,4 +65,5 @@ h1 {
 .blockquote-footer {
   font-family: "Avenir Next" !important;
   font-size: 1.5rem;
+  margin-bottom: 5px;
 }

@@ -15,11 +15,11 @@
         <% @images.each_with_index do |image, index|%>
         <% if index == 0 %>
           <div class="carousel-item active">
-            <%= image_tag "#{File.basename(image)}", class:"d-block w-100", alt:"..."%>
+            <%= image_tag "#{@model_folder}/#{File.basename(image)}", class:"d-block w-100", alt:"..."%>
           </div>
         <% else %>
           <div class="carousel-item">
-            <%= image_tag "#{File.basename(image)}", class:"d-block w-100", alt:"..."%>
+            <%= image_tag "#{@model_folder}/#{File.basename(image)}", class:"d-block w-100", alt:"..."%>
           </div>
         <% end %>
       <%end%>
