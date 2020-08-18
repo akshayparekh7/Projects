@@ -5,21 +5,14 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <%= link_to 'Articles Listing', articles_path , class: "nav-link"%>
-      </li>
-      <li class="nav-item ">
-        <%= link_to 'Create New Article', new_article_path , class: "nav-link"%>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Brands
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">OnePlus</a>
-          <a class="dropdown-item" href="#">Iphone</a>
-          <a class="dropdown-item" href="#">Samsung</a>
-          <a class="dropdown-item" href="#">Oppo</a>
+          <%= link_to 'One Plus', one_plus_path, class: "dropdown-item"%>
+          <%= link_to 'Apple', apple_index_path, class: "dropdown-item"%>
+          <%= link_to 'Samsung', samsung_index_path, class: "dropdown-item"%>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Others</a>
         </div>

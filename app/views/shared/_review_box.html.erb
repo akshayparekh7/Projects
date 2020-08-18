@@ -11,9 +11,11 @@
       <% end %>
     </footer>
     </blockquote>
-    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">
-      Images for <%=@specification.phone_name%>
-    </button>
+    <div class= "center">
+      <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">
+        Show Images for <%=@specification.phone_name%>
+      </button>
+    </div>
   </div>
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
