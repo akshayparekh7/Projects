@@ -66,7 +66,8 @@ class SpecificationsController < ApplicationController
             :connection,
             :rating,
             :created_at,
-            :updated_at
+            :updated_at,
+            :brand_name
             )
     end  
 end
