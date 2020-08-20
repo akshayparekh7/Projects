@@ -9,22 +9,20 @@
 
 <div class= "container">
   <% @one_plus_specifications.each do |specification| %> 
-      <div class="card mb-3 shadow p-3 rounded" style="max-width: 90%;">
-          <div class="row no-gutters">
-            <div class="col-md-8">
-              <div class="card-body">
-                <h3 class="card-title"><span class="badge badge-light">Model Name:</span><%= specification.phone_name%></h3>
-                <h3 class="card-text"><span class="badge badge-light">Launch Date:</span> <%= specification.launch_date %></h3>
-                <h3 class="card-text"><span class="badge badge-light">Price:</span> <%= specification.price %></h3>
-                <h3 class="card-text"><span class="badge badge-light">Variants:</span> <%= specification.variants %></h3>
-                <div class= "center">
-                  <small class="text-muted"><%= time_ago_in_words specification.created_at %> ago</small>
-                </div>  
-                <%= link_to '', one_plu_path(specification), class: "stretched-link"%>
-              </div>
-            </div>
-          </div>
+    <div class="card mb-3 shadow p-3 rounded" style="max-width: 90%;">
+      <div class="row no-gutters">
+        <div class="card-body">
+          <h4 class="card-title"><span class="badge badge-light">Model Name:</span><%= specification.phone_name%></h4>
+          <h4 class="card-text"><span class="badge badge-light">Launch Date:</span> <%= specification.launch_date %></h4>
+          <h4 class="card-text"><span class="badge badge-light">Price:</span> <%= specification.price %></h4>
+          <h4 class="card-text"><span class="badge badge-light">Variants:</span> <%= specification.variants %></h4>
+          <div class= "center">
+            <small class="text-muted"><%= time_ago_in_words specification.created_at %> ago</small>
+          </div>  
+          <%= link_to '', one_plu_path(specification), class: "stretched-link"%>
+        </div>
       </div>
+    </div>
   <% end %>
 </div>
 
