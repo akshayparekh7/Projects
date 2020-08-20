@@ -6,12 +6,17 @@
 //     margin-bottom: 60px;
 //   }  
 
-table, th, td {
+table, th , td{
   border: 0.5px solid rgb(100, 97, 97);
+}
+
+.specification_table_body{
+  white-space: pre-line;
+  text-align: left;
 }
     
 .navbar-brand {  
-    font-size: 1.75rem;
+    font-size: 1.45rem;
     font-family: "Avenir Next" !important;
   }
     
@@ -75,4 +80,9 @@ h1 {
 
 .center{
   text-align: center;
+}
+
+.review_body {
+  display: inline;
+  white-space: pre-line; 
 }
