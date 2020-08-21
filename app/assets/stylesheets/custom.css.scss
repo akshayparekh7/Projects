@@ -91,3 +91,14 @@ h1 {
   font-weight: lighter;
   font-size: medium;
 }
+
+.index-card-body {
+  text-align-last: left;
+  -webkit-appearance: textarea;
+}
+
+.text-muted {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: larger;
+}

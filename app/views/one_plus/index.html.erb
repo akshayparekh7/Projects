@@ -12,20 +12,19 @@
     <div class="card mb-3 shadow p-3 rounded" style="max-width: 90%;">
       <div class="row no-gutters">
         <div class="card-body">
-          <h4 class="card-title"><span class="badge badge-light">Model Name:</span><%= specification.phone_name%></h4>
-          <h4 class="card-text"><span class="badge badge-light">Launch Date:</span> <%= specification.launch_date %></h4>
-          <h4 class="card-text"><span class="badge badge-light">Price:</span> <%= specification.price %></h4>
-          <h4 class="card-text"><span class="badge badge-light">Variants:</span> <%= specification.variants %></h4>
+          <h5><span class="badge badge-light">Model Name: </span> <span class="index-card-body"> <%= specification.phone_name%> </span><br> </h5>
+          <h5><span class="badge badge-light">Launch Date:</span><span class="index-card-body"> <%= specification.launch_date %> </span><br></h5>
+          <h5><span class="badge badge-light">Price:</span> <span class="index-card-body"><%= specification.price %></span> <br></h5>
+          <h5><span class="badge badge-light">Variants:</span><span class="index-card-body"> <%= specification.variants %></span><br></h5>
+          <div class= "center text-muted">
+            <small>Created: <%= time_ago_in_words specification.created_at %> ago</small>
+          </div>
           <div class= "center">
-            <small class="text-muted"><%= time_ago_in_words specification.created_at %> ago</small>
-          </div>  
+            <%= button_to 'Click for Detailed Review',one_plu_path(specification), class: "btn btn-dark" %>
+          </div>
           <%= link_to '', one_plu_path(specification), class: "stretched-link"%>
         </div>
       </div>
     </div>
   <% end %>
 </div>
-
-
-
- 
