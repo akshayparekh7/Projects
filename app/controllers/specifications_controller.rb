@@ -1,25 +1,26 @@
 
 class SpecificationsController < ApplicationController
+    before_action :validate_user
     before_action :set_article , only: [:show, :edit, :update, :destroy]  
     
     def index
-        @specifications = Specification.all
+      @specifications = Specification.all
     end
 
     def new
-        @specification = Specification.new
+      @specification = Specification.new
     end  
 
     def show
     end  
 
     def create
-        @specification = Specification.new(specification_params)
+      @specification = Specification.new(specification_params)
         if @specification.save
-        flash[:notice] = "Article was created successfully."
-        redirect_to @specification 
+          flash[:notice] = "Article was created successfully."
+          redirect_to @specification 
         else
-        render 'new'
+          render 'new'
         end 
     end
     
@@ -27,17 +28,17 @@ class SpecificationsController < ApplicationController
     end
 
     def update
-        if @specification.update(specification_params)
+      if @specification.update(specification_params)
         flash[:notice] = "Article was updated successfully."
         redirect_to @specification
-        else
+      else
         render 'edit'
-        end
+      end
     end
 
     def destroy
-        @specification.destroy
-        redirect_to specifications_path
+      @specification.destroy
+      redirect_to specifications_path
     end
 
     private
@@ -69,5 +70,11 @@ class SpecificationsController < ApplicationController
             :updated_at,
             :brand_name
             )
-    end  
+    end
+
+    def validate_user
+      byebug
+      redirect_to login_path if session[:user_id].blank?
+    end
+
 end

@@ -3,5 +3,7 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+#   cities = Cit(y.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#   Mayor.createname: 'Emanuel', city: cities.first)
+scrape = Specification.new
+scrape.scrap
