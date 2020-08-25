@@ -21,7 +21,7 @@ class SpecificationsController < ApplicationController
           redirect_to @specification 
         else
           render 'new'
-        end 
+        end
     end
     
     def edit
@@ -73,8 +73,7 @@ class SpecificationsController < ApplicationController
     end
 
     def validate_user
-      byebug
-      redirect_to login_path if session[:user_id].blank?
+      redirect_to login_path if session[:user_id].body.blank?
     end
 
 end
