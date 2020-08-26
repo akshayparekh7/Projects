@@ -2,7 +2,8 @@ class OnePlusController < ApplicationController
 
   def index
     @one_plus_specifications = Specification.where(brand_name: "One Plus")
-    @one_plus_specifications = @one_plus_specifications.order(created_at: :desc)
+    @one_plus_specifications = @one_plus_specifications.order(launch_date: :desc)
+    @index_images = Dir.glob("app/assets/images/index_images/one_plus/*")
   end  
 
   def show
