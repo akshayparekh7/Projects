@@ -73,7 +73,7 @@ class SpecificationsController < ApplicationController
     end
 
     def validate_user
-      redirect_to login_path if session[:user_id].body.blank?
+      redirect_to login_path if session[:user_id].blank?
     end
 
 end
