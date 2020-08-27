@@ -4,6 +4,13 @@ class OnePlusController < ApplicationController
     @one_plus_specifications = Specification.where(brand_name: "One Plus")
     @one_plus_specifications = @one_plus_specifications.order(launch_date: :desc)
     @index_images = Dir.glob("app/assets/images/index_images/one_plus/*")
+    @a = []
+    @index_images.each do |file|
+      b = File.basename(file)
+      b = b.slice(0..(b.index(".") - 1)).downcase
+      @a << b
+    end
+
   end  
 
   def show
