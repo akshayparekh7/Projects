@@ -18,7 +18,7 @@ table, th , td{
 .navbar-brand {  
     font-size: 1.45rem;
     font-family: "Avenir Next" !important;
-  }
+}
     
 h1 {  
     color: lightseagreen;
@@ -27,7 +27,6 @@ h1 {
 
 .btn-primary {
   color: #fff;
-  /* background-color: #007bff; */
   border-color: #007bff;
 }
 
@@ -47,12 +46,9 @@ h1 {
 }
 
 .carousel {
-  // background: none repeat scroll 0 0 rgb(216, 216, 216);
   padding: 0.5%;
   width: 100%;
   height: fit-content !important;
-  // border-style: solid;
-  // align-items: center;
   margin: 0 auto;
 }
 
